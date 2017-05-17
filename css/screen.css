@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -182,6 +183,23 @@ strong {
 i,
 em {
   font-style: italic;
+}
+
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  margin: 1em 0 .5em 0;
+}
+.content ul li {
+  position: relative;
+  padding-left: 1.2em;
+  line-height: 1.6;
+}
+.content ul li:before {
+  content: '—';
+  position: absolute;
+  left: 0;
 }
 
 input[type="text"],
