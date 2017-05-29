@@ -21,7 +21,8 @@
 		   	<ul class="nav navbar-nav">
 			   	<li class="nav-item"><a href="inner.php">О нас</a></li>
 			   	<li class="nav-item dropdown">
-			   		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Услуги<span class="caret"></span></a>
+			   		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Услуги<span class="caret"></span><label class="drop-icon" for="sm1">▾</label></a>
+			   		<input type="checkbox" name="sm1" id="sm1">
 			   		<ul class="dropdown-menu">
 			   			<li class="nav-item"><a href="inner.php">Ремонтно-отделочные работы</a></li>
 			   			<li class="nav-item"><a href="inner.php">Портфолио</a></li>

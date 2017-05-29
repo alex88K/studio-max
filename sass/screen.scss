@@ -1,4 +1,4 @@
-@import "compass/reset";
+﻿@import "compass/reset";
 @import "compass/utilities/sprites";
 
 $pr: 'Circe';
@@ -122,6 +122,33 @@ strong { font-family: $prb; }
 
 i,
 em { font-style: italic; }
+
+.content {
+	h3,
+	h4,
+	h5,
+	h6 { margin: 1em 0 .5em 0; }
+	ul {
+		li {
+			position: relative;
+			padding-left: 1.2em;
+			line-height: 1.6;
+			&:before {
+				content: '—';
+				position: absolute;
+				left: 0;
+			}
+		}
+	}
+	ol { 
+		padding-left: 1.2em;
+		list-style-type: decimal; 
+		list-style-position: outside;
+		li {
+			line-height: 1.6;
+		}
+	}
+}
 
 input[type="text"],
 input[type="email"],
@@ -362,7 +389,7 @@ $box-padding: 10px;
 				background: #b3da41;
 			}
 		}
-		&.active a {
+		&.active > a {
 		 	color: #fff;
 			background: #b3da41;
 		}
@@ -372,15 +399,38 @@ $box-padding: 10px;
 .navbar-collapse { margin: auto -15px !important; }
 
 .nav {
+	margin: 0;
 	.dropdown {
 		&.open,
 		&.open > a,
-		&.open > a:hover,
-		&.open > a:focus {
+		&.open > a:hover {
 			color: #fff;
 			background: #b3da41;
 		}
+		&:hover .dropdown-menu { display: block; }
+		& > input,
+		.drop-icon { display: none; }
 	}
+	.open > a,
+	.open > a:focus,
+	.open > a:hover { background-color: transparent; }
+}
+
+.drop-icon {
+	z-index: 100;
+	position: absolute;
+  	right: 0;
+  	top: 0;
+  	height: 100%;
+	padding: 0 1em;
+	font-size: 1em;
+	line-height: 50px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, .125);
+	color: rgba(255, 255, 255, .75);
+	cursor: pointer;
+	&:hover,
+	&:focus { color: red; }
 }
 
 .caret { margin-left: 8px; }
@@ -786,6 +836,7 @@ div[class^="col-"] {
 .portfolio-nav-wrap { margin-top: -20px; }
 
 .portfolio-nav-item {
+	&:before { display: none; }
 	a {
 		display: inline-block;
 		margin: 12px 0;
@@ -875,6 +926,7 @@ div[class^="col-"] {
 	-o-flex-direction: row;
 	flex-direction: row;
 	padding: 0 20px;
+	&:before { display: none; }
 	.ava {
 		width: 90px;
 		height: 90px;
@@ -903,6 +955,10 @@ div[class^="col-"] {
 		line-height: 1.1 
 	}
 }
+
+.commentPage .comment-slider-item .name,
+.commentPage .comment-slider-item .prof,
+.commentPage .comment-slider-item .desc-col p { color: #4d1515; }
 
 .person-col {
 	flex-basis: 25%;
@@ -1134,6 +1190,8 @@ $box-padding: 10px;
 					line-height: 50px;
 				}
 			}
+			.caret { display: none; }
+			.drop-icon { display: block; }
 			.dropdown.open,
 			.dropdown.open > a { background: transparent; }
 		}
@@ -1166,7 +1224,7 @@ $box-padding: 10px;
 
   	/* Orientation-dependent styles for the content of the menu */
   	.cbp-spmenu-vertical {
-		width: 305px;
+		width: 350px;
 		height: 100% !important;
 		top: 0;
 		z-index: 1000;
@@ -1194,8 +1252,8 @@ $box-padding: 10px;
    }
 
   /* Vertical menu that slides from the left or right */
-  .cbp-spmenu-left { left: -305px; }
-  .cbp-spmenu-right { right: -305px; }
+  .cbp-spmenu-left { left: -350px; }
+  .cbp-spmenu-right { right: -350px; }
   .cbp-spmenu-left.cbp-spmenu-open { left: 0px; }
   .cbp-spmenu-right.cbp-spmenu-open { right: 0px; }
 

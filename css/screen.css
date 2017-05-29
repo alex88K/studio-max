@@ -201,6 +201,14 @@ em {
   position: absolute;
   left: 0;
 }
+.content ol {
+  padding-left: 1.2em;
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+.content ol li {
+  line-height: 1.6;
+}
 
 input[type="text"],
 input[type="email"],
@@ -479,7 +487,7 @@ textarea.form-control:focus {
   color: #fff;
   background: #b3da41;
 }
-.navbar-nav .nav-item.active a {
+.navbar-nav .nav-item.active > a {
   color: #fff;
   background: #b3da41;
 }
@@ -488,9 +496,42 @@ textarea.form-control:focus {
   margin: auto -15px !important;
 }
 
-.nav .dropdown.open, .nav .dropdown.open > a, .nav .dropdown.open > a:hover, .nav .dropdown.open > a:focus {
+.nav {
+  margin: 0;
+}
+.nav .dropdown.open, .nav .dropdown.open > a, .nav .dropdown.open > a:hover {
   color: #fff;
   background: #b3da41;
+}
+.nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+.nav .dropdown > input,
+.nav .dropdown .drop-icon {
+  display: none;
+}
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
+  background-color: transparent;
+}
+
+.drop-icon {
+  z-index: 100;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding: 0 1em;
+  font-size: 1em;
+  line-height: 50px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.125);
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}
+.drop-icon:hover, .drop-icon:focus {
+  color: red;
 }
 
 .caret {
@@ -934,6 +975,9 @@ div[class^="col-"] .section-header {
   margin-top: -20px;
 }
 
+.portfolio-nav-item:before {
+  display: none;
+}
 .portfolio-nav-item a {
   display: inline-block;
   margin: 12px 0;
@@ -1027,6 +1071,9 @@ div[class^="col-"] .section-header {
   flex-direction: row;
   padding: 0 20px;
 }
+.comment-slider-item:before {
+  display: none;
+}
 .comment-slider-item .ava {
   width: 90px;
   height: 90px;
@@ -1055,6 +1102,12 @@ div[class^="col-"] .section-header {
 .comment-slider-item .desc-col p {
   text-align: justify;
   line-height: 1.1;
+}
+
+.commentPage .comment-slider-item .name,
+.commentPage .comment-slider-item .prof,
+.commentPage .comment-slider-item .desc-col p {
+  color: #4d1515;
 }
 
 .person-col {
@@ -1303,6 +1356,12 @@ div[class^="col-"] .section-header {
     padding: 0 25px 0 40px;
     line-height: 50px;
   }
+  .main-menu .navbar-nav.nav .caret {
+    display: none;
+  }
+  .main-menu .navbar-nav.nav .drop-icon {
+    display: block;
+  }
   .main-menu .navbar-nav.nav .dropdown.open,
   .main-menu .navbar-nav.nav .dropdown.open > a {
     background: transparent;
@@ -1341,7 +1400,7 @@ div[class^="col-"] .section-header {
 
   /* Orientation-dependent styles for the content of the menu */
   .cbp-spmenu-vertical {
-    width: 305px;
+    width: 350px;
     height: 100% !important;
     top: 0;
     z-index: 1000;
@@ -1370,11 +1429,11 @@ div[class^="col-"] .section-header {
 
   /* Vertical menu that slides from the left or right */
   .cbp-spmenu-left {
-    left: -305px;
+    left: -350px;
   }
 
   .cbp-spmenu-right {
-    right: -305px;
+    right: -350px;
   }
 
   .cbp-spmenu-left.cbp-spmenu-open {
