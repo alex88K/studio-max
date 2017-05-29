@@ -19,7 +19,7 @@
 						      		<li class="portfolio-nav-item"><a href="#">Коммерческие объекты</a></li>
 						      		<li class="portfolio-nav-item active">
 						      			<a role="button" data-toggle="collapse" href="#collapseList-1" aria-expanded="false">Помещения</a>
-											<ul class="portfolio-nav-sub collapse" id="collapseList-1" aria-expanded="false">
+											<ul class="portfolio-nav-sub collapse" id="collapseList-1">
 												<li class="portfolio-nav-item"><a href="#">Гостиные</a></li>
 												<li class="portfolio-nav-item"><a href="#">Спальни</a></li>
 												<li class="portfolio-nav-item"><a href="#">Детские</a></li>

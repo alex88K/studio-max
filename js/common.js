@@ -39,8 +39,6 @@ $(function() {
 		}
 	});
 
-	$(".collapse").collapse();
-
 /*--Portfolio----------------------*/
 
 	var $portfolio = $('.portfolio-gallery').masonry({

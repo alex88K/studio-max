@@ -422,7 +422,7 @@ textarea.form-control:focus {
 }
 
 .soc-sprite, .soc-fb, .soc-inst, .soc-tw, .soc-vk {
-  background-image: url('../images/soc-s292d068f60.png');
+  background-image: url('../images/../images/soc-s292d068f60.png');
   background-repeat: no-repeat;
 }
 
@@ -613,7 +613,7 @@ textarea.form-control:focus {
   position: relative;
 }
 .promo-slider .dots-nav {
-  z-index: 20;
+  z-index: 8;
   position: absolute;
   bottom: 100px;
   right: 40px;
@@ -1178,7 +1178,7 @@ div[class^="col-"] .section-header {
 }
 
 .soc_b-sprite, .soc_b-fb, .soc_b-inst, .soc_b-tw, .soc_b-vk {
-  background-image: url('../images/soc_b-s097841fdae.png');
+  background-image: url('../images/../images/soc_b-s097841fdae.png');
   background-repeat: no-repeat;
 }
 
