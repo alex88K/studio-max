@@ -769,25 +769,25 @@ div[class^="col-"] {
 
 @media screen and(min-width: 980px) {
 	.portfolio-item {
-		width: 33%;
+		width: 32.95%;
 		height: 400px;
 		&.portfolio-height2 { height: 800px; }
-		&.portfolio-width2 { width: 66%; }
+		&.portfolio-width2 { width: 65.95%; }
 	}
 
 	.portfolio-gallery--inner {
 		.portfolio-item {
-			width: 33%;
+			width: 32.95%;
 			height: 315px;
 			&.portfolio-height2 { height: 630px; }
-			&.portfolio-width2 { width: 66%; }
+			&.portfolio-width2 { width: 65.95%; }
 		}
 	}
 }
 
 @media screen and(min-width: 1400px ) {
 	.portfolio-item {
-		width: 25%;
+		width: 24.05%;
 		height: 360px;
 		&.portfolio-height2 { height: 720px; }
 		&.portfolio-width2 { width: 50%; }
@@ -795,27 +795,27 @@ div[class^="col-"] {
 
 	.portfolio-gallery--inner {
 		.portfolio-item {
-			width: 33%;
+			width: 32.95%;
 			height: 315px;
 			&.portfolio-height2 { height: 630px; }
-			&.portfolio-width2 { width: 66%; }
+			&.portfolio-width2 { width: 65.95%; }
 		}
 	}
 }
 
 @media screen and(min-width: 1600px) {
 	.portfolio-item {
-		width: 20%;
+		width: 19.95%;
 		&.portfolio-height2 { height: 720px; }
-		&.portfolio-width2 { width: 40%; }
+		&.portfolio-width2 { width: 39.95%; }
 	}
 
 	.portfolio-gallery--inner {
 		.portfolio-item {
-			width: 33%;
+			width: 32.95%;
 			height: 315px;
 			&.portfolio-height2 { height: 630px; }
-			&.portfolio-width2 { width: 66%; }
+			&.portfolio-width2 { width: 39.95%; }
 		}
 	}
 }
@@ -1407,6 +1407,9 @@ $box-padding: 10px;
 }
 
 @media screen and (max-width: 768px) {
+	h1, 
+	h2 { font-size: 32px; }
+
 	.lang-bar {
 		height: 30px;
 		.lang { margin-top: 6px; }
@@ -1432,6 +1435,11 @@ $box-padding: 10px;
 			.contact-l:last-child { margin-right: 30px; }
 		}
 		.contact-l:last-child { margin-right: 50px; }
+	}
+
+	.promo-slider-item .slider-title { 
+		font-size: 32px;
+		line-height: 1.2;
 	}
 
 	.arr-nav {
@@ -1484,4 +1492,13 @@ $box-padding: 10px;
 	}
 }
 
+@media screen and (max-width: 400px) {
+	.header {
+		.soc,
+		.contact-b { display: none }
+	}
 
+	.navbar:after { display: none; }
+		
+	.navbar-toggle { top: -15px; }
+}
