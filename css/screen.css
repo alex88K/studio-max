@@ -1338,12 +1338,20 @@ div[class^="col-"] .section-header {
     display: block;
     float: none;
   }
+  .main-menu .navbar-nav.nav li input[type="checkbox"] + .dropdown-menu {
+    display: none;
+  }
+  .main-menu .navbar-nav.nav li input[type="checkbox"]:checked + .dropdown-menu {
+    display: block;
+  }
   .main-menu .navbar-nav.nav a {
     float: none;
+    height: 44px;
     margin: 0;
-    padding: 0 25px;
+    padding: 0 20px;
     color: #fff;
     font-size: 14px;
+    white-space: wrap;
     border-bottom: 0 solid #343432;
   }
   .main-menu .navbar-nav.nav .dropdown-menu {
@@ -1353,8 +1361,8 @@ div[class^="col-"] .section-header {
     padding: 0;
   }
   .main-menu .navbar-nav.nav .dropdown-menu a {
-    padding: 0 25px 0 40px;
-    line-height: 50px;
+    padding: 0 20px 0 30px;
+    font-size: 12px;
   }
   .main-menu .navbar-nav.nav .caret {
     display: none;
@@ -1365,9 +1373,6 @@ div[class^="col-"] .section-header {
   .main-menu .navbar-nav.nav .dropdown.open,
   .main-menu .navbar-nav.nav .dropdown.open > a {
     background: transparent;
-  }
-  .main-menu.collapse {
-    display: block !important;
   }
 
   .navbar-collapse.collapse {
@@ -1400,7 +1405,7 @@ div[class^="col-"] .section-header {
 
   /* Orientation-dependent styles for the content of the menu */
   .cbp-spmenu-vertical {
-    width: 350px;
+    width: 310px;
     height: 100% !important;
     top: 0;
     z-index: 1000;
@@ -1429,11 +1434,11 @@ div[class^="col-"] .section-header {
 
   /* Vertical menu that slides from the left or right */
   .cbp-spmenu-left {
-    left: -350px;
+    left: -310px;
   }
 
   .cbp-spmenu-right {
-    right: -350px;
+    right: -310px;
   }
 
   .cbp-spmenu-left.cbp-spmenu-open {

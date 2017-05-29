@@ -1171,13 +1171,17 @@ $box-padding: 10px;
 			li { 
 				display: block; 
 				float: none;
+				input[type="checkbox"] + .dropdown-menu { display: none; }
+				input[type="checkbox"]:checked + .dropdown-menu { display: block; }
 			}
 			a { 
 				float: none;
+				height: 44px;
 				margin: 0;
-				padding: 0 25px;
+				padding: 0 20px;
 				color: #fff;
 				font-size: 14px;
+				white-space: wrap;
 				border-bottom: 0 solid #343432;
 			}
 			.dropdown-menu {
@@ -1186,8 +1190,8 @@ $box-padding: 10px;
 				background: transparent;
 				padding: 0;
 				a { 
-					padding: 0 25px 0 40px; 
-					line-height: 50px;
+					padding: 0 20px 0 30px; 
+					font-size: 12px;
 				}
 			}
 			.caret { display: none; }
@@ -1195,7 +1199,6 @@ $box-padding: 10px;
 			.dropdown.open,
 			.dropdown.open > a { background: transparent; }
 		}
-		&.collapse { display: block !important; }
 	}
 
 	.navbar-collapse.collapse { height: 100% !important; }
@@ -1224,7 +1227,7 @@ $box-padding: 10px;
 
   	/* Orientation-dependent styles for the content of the menu */
   	.cbp-spmenu-vertical {
-		width: 350px;
+		width: 310px;
 		height: 100% !important;
 		top: 0;
 		z-index: 1000;
@@ -1252,8 +1255,8 @@ $box-padding: 10px;
    }
 
   /* Vertical menu that slides from the left or right */
-  .cbp-spmenu-left { left: -350px; }
-  .cbp-spmenu-right { right: -350px; }
+  .cbp-spmenu-left { left: -310px; }
+  .cbp-spmenu-right { right: -310px; }
   .cbp-spmenu-left.cbp-spmenu-open { left: 0px; }
   .cbp-spmenu-right.cbp-spmenu-open { right: 0px; }
 
